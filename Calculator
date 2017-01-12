@@ -1,0 +1,33 @@
+
+#include "stdafx.h"
+#include <stdio.h>
+
+void main()
+{
+
+	printf("Enter equation (enter 0q0 to quit)\n");
+	float num1, num2;
+	char operation;
+	scanf_s("%f%c%f", &num1, &operation,1, &num2);
+	
+	switch (operation){
+	case '+':
+		printf("Result = %.2f\n", num1 + num2);
+		break;
+	case '-': 
+		printf("Result = %.2f\n", num1 - num2);
+		break;
+	case '*':
+		printf("Result = %.2f\n", num1 * num2);
+		break;
+	case '/':
+		printf("Result = %.2f\n", num1 / num2);
+		break;
+	case 'q':
+		printf("You chose to quit.\n");
+		break;
+	default:
+		printf("Invalid equation, try again\n");
+	}
+}
+
